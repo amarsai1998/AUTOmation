@@ -73,6 +73,8 @@ public class DatabaseTesting {
 
         // Close the browser
         driver.quit();
+        
+        
     }
 }
 
