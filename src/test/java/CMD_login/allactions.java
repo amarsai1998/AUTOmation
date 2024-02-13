@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class allactions {
 
-	public static void main(String[] args) throws InterruptedException {
+public static void main(String[] args) throws InterruptedException {
 		
 		System.setProperty("Webdriver.chrome.driver", "C:\\Users\\AmarVeeravalli\\Downloads\\chromedriver-win64 (2)\\chromedriver-win64\\chromedriver.exe");
          
@@ -94,4 +94,7 @@ public class allactions {
 	    
 	}
 
-}
+
+
+	}
+
