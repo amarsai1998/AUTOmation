@@ -1,10 +1,14 @@
 package CMD_login;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class allactions {
 
@@ -80,8 +84,9 @@ public static void main(String[] args) throws InterruptedException {
 	    act.dragAndDrop(ocean, moving).perform();
 	    */
 		
-	    //5 mouse hover
-	    
+	    //5 mouse hover 
+		
+	   /* 
 	    WebElement main =driver.findElement(By.xpath("//aside[@class='left-sidebar']"));
 
 	    WebElement menu =driver.findElement(By.xpath("//a[@class='sidebar-link has-arrow waves-effect waves-dark ng-star-inserted']//span[@class='hide-menu'][normalize-space()='Workflow']"));
@@ -89,9 +94,77 @@ public static void main(String[] args) throws InterruptedException {
 		Actions act=new Actions(driver);
 
 	    act.moveToElement(main).moveToElement(menu).click().perform();
-
-	    
-	    
+          
+          */
+	    //6 Range slider
+		
+	//	WebDriverManager.chromedriver().setup(); // this will setup the method and we no need to give paths.
+		
+	/*	WebElement first_slider=driver.findElement(By.xpath("//span[1]"));
+		
+		
+	System.out.println(	first_slider.getLocation());
+	
+	System.out.println(first_slider.getSize());
+	
+		
+		Actions act=new Actions(driver);
+		
+		act.dragAndDropBy(first_slider, 100, 0).perform();
+		
+		
+		System.out.println(	first_slider.getLocation());
+		
+		System.out.println(first_slider.getSize());
+		
+		
+		WebElement max_slider=driver.findElement(By.xpath("//span[2]"));
+		
+		act.dragAndDropBy(max_slider, -110, 0).perform();
+	
+		
+    System.out.println(	max_slider.getLocation());
+		
+		System.out.println(max_slider.getSize());
+	*/
+	    //7 Actions and action
+	/*	
+	WebElement feature=	driver.findElement(By.xpath("//li[normalize-space()='VBScript Tutorial']"));
+		
+		Actions act= new Actions(driver);
+		
+		//act.moveToElement(feature).perform();
+		
+		Action action=act.moveToElement(feature).build();
+		
+		action.perform();
+		*/
+		//8 keyboard actions(single key )
+		/*
+		driver.findElement(By.xpath("https://www.tutorialspoint.com/vbscript/vbscript_syntax.htm"));
+		Actions act =new Actions(driver);
+		
+		act.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(1000);
+		act.sendKeys(Keys.ESCAPE).perform();
+		*/
+		// 9 keyboard actions(multiple key)
+		
+	WebElement Firstbox =	driver.findElement(By.xpath("//input[@placeholder='Subject']"));
+		WebElement Secondbox= driver.findElement(By.xpath("//input[@placeholder='Enter Task ID']"));
+		
+		Firstbox.sendKeys("Copy");
+Actions act =new Actions(driver);
+//CTRL A-Select
+     act.keyDown(Keys.CONTROL);
+     act.sendKeys("a");
+     act.keyUp(Keys.CONTROL);
+      act.perform();
+      
+      act.keyDown(Keys.CONTROL);
+      act.sendKeys("c");
+      act.keyUp(Keys.CONTROL);
+       act.perform();
 	}
 
 
