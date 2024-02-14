@@ -160,14 +160,28 @@ Actions act =new Actions(driver);
      act.sendKeys("a");
      act.keyUp(Keys.CONTROL);
       act.perform();
-      
+      //CTRL C copy
       act.keyDown(Keys.CONTROL);
       act.sendKeys("c");
       act.keyUp(Keys.CONTROL);
        act.perform();
-	}
+       //Tab -Shift to input2 box
+       act.sendKeys(Keys.CONTROL);
+       act.sendKeys("v");
+       act.keyUp(Keys.CONTROL);
+       act.perform();
+       
+       if (Firstbox.getAttribute("value").equals(Secondbox.getAttribute("value")))
+    	   System.out.println("text copied");
+    	   else
+    		   System.out.println("not copied");
+    	   
+       }
+   }
+       
+	
 
 
 
-	}
+	
 
