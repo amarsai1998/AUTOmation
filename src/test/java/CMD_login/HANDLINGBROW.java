@@ -48,7 +48,7 @@ public class HANDLINGBROW {
 		
 		//second method -list collection
 		
-	 List<String> M2=new ArrayList(Id);//converting set to ----> list
+		ArrayList <String> M2=new ArrayList(Id);//converting set to ----> list
 	  
 	/* String parentWid=M2.get(0);
 	 String childWid=M2.get(1);
