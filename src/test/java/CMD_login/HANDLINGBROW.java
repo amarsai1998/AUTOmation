@@ -23,14 +23,16 @@ public class HANDLINGBROW {
 		
 		
 		//getwindowhandle(single)
-		String webid=driver.getWindowHandle();
+		//String webid=driver.getWindowHandle();// return id of the single browser window
 		
-		System.out.println(webid);
+		//System.out.println(webid);
           
-		//getwindowhandles(two)
-		WebElement ph=driver.findElement(By.xpath("//a[normalize-space()='CredentialMyDoc New Look and Feel!']"));
+
+		driver.findElement(By.xpath("//a[normalize-space()='CredentialMyDoc New Look and Feel!']")).click();
 		
-		Set<String> Id=driver.getWindowHandles();
+		//getwindowhandles(two)
+
+		Set<String> Id=driver.getWindowHandles();//return id of the multiple browser window
 		
 		
 		/*
