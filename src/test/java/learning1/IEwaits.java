@@ -81,5 +81,6 @@ public static WebElement waitForElementPresent(WebDriver driver,By locator,int t
 		});
 		
 		element.click();
+		//return element;
 }
 }
